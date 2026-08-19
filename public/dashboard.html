@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - College Request Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="dashboard.html" class="brand">
+        <div class="brand-icon">🎓</div>
+        <span>College Portal</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        <li><a href="create-request.html" class="nav-link">Create Request</a></li>
+        <li><a href="requests.html" class="nav-link">My Requests</a></li>
+        <li><span id="user-display" class="user-badge">Student</span></li>
+        <li><a href="#" id="logout-btn" class="nav-link logout">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Dashboard Overview</h1>
+        <p class="page-subtitle">Track your college service requests and approvals</p>
+      </div>
+      <a href="create-request.html" class="btn btn-primary">+ New Request</a>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="stats-grid">
+      <div class="stat-card stat-total">
+        <div class="stat-title">Total Requests</div>
+        <div id="stat-total" class="stat-value">0</div>
+      </div>
+      <div class="stat-card stat-pending">
+        <div class="stat-title">Pending</div>
+        <div id="stat-pending" class="stat-value">0</div>
+      </div>
+      <div class="stat-card stat-approved">
+        <div class="stat-title">Approved</div>
+        <div id="stat-approved" class="stat-value">0</div>
+      </div>
+      <div class="stat-card stat-rejected">
+        <div class="stat-title">Rejected</div>
+        <div id="stat-rejected" class="stat-value">0</div>
+      </div>
+    </div>
+
+    <!-- Recent Requests Table -->
+    <div class="card-table-wrapper">
+      <div class="table-header">
+        <h2 style="font-size: 1.1rem; font-weight: 600;">Recent Requests</h2>
+        <a href="requests.html" style="font-size: 0.875rem; color: var(--primary-color); text-decoration: none; font-weight: 600;">View All →</a>
+      </div>
+
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Request ID</th>
+            <th>Type</th>
+            <th>Title</th>
+            <th>Required Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="recent-requests-body">
+          <tr>
+            <td colspan="6" class="text-center" style="padding: 2rem; color: var(--text-muted);">Loading recent requests...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="footer">
+    🎓 College Request Management Portal • Student Assignment Project
+  </footer>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

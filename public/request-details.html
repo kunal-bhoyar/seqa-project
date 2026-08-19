@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Details - College Request Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="dashboard.html" class="brand">
+        <div class="brand-icon">🎓</div>
+        <span>College Portal</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="create-request.html" class="nav-link">Create Request</a></li>
+        <li><a href="requests.html" class="nav-link">My Requests</a></li>
+        <li><span id="user-display" class="user-badge">Student</span></li>
+        <li><a href="#" id="logout-btn" class="nav-link logout">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header" style="max-width: 750px; margin: 0 auto 1.5rem auto;">
+      <div>
+        <a href="requests.html" style="font-size: 0.875rem; color: var(--primary-color); text-decoration: none; font-weight: 600;">← Back to My Requests</a>
+        <h1 class="page-title" style="margin-top: 0.4rem;">Request Details</h1>
+      </div>
+    </div>
+
+    <!-- Alert Box -->
+    <div style="max-width: 750px; margin: 0 auto;">
+      <div id="details-alert" class="alert alert-success hidden"></div>
+    </div>
+
+    <!-- Details Card -->
+    <div id="details-container" class="details-card">
+      <div class="text-center" style="padding: 2rem; color: var(--text-muted);">
+        Loading request details...
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    🎓 College Request Management Portal • Student Assignment Project
+  </footer>
+
+  <script src="js/request-details.js"></script>
+</body>
+</html>

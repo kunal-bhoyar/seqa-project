@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Requests - College Request Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="dashboard.html" class="brand">
+        <div class="brand-icon">🎓</div>
+        <span>College Portal</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="create-request.html" class="nav-link">Create Request</a></li>
+        <li><a href="requests.html" class="nav-link active">My Requests</a></li>
+        <li><span id="user-display" class="user-badge">Student</span></li>
+        <li><a href="#" id="logout-btn" class="nav-link logout">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">My Requests</h1>
+        <p class="page-subtitle">View, track, edit, or cancel your submitted requests</p>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <!-- Status Filter Dropdown -->
+        <select id="filter-status" class="form-select" style="width: auto; padding: 0.45rem 0.75rem; font-size: 0.9rem;">
+          <option value="ALL">All Statuses</option>
+          <option value="Pending">Pending Only</option>
+          <option value="Approved">Approved Only</option>
+          <option value="Rejected">Rejected Only</option>
+        </select>
+
+        <a href="create-request.html" class="btn btn-primary">+ New Request</a>
+      </div>
+    </div>
+
+    <!-- Alert Box -->
+    <div id="alert-box" class="alert alert-success hidden"></div>
+
+    <!-- Requests Table Card -->
+    <div class="card-table-wrapper">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Request ID</th>
+            <th>Type</th>
+            <th>Title</th>
+            <th>Required Date</th>
+            <th>Status</th>
+            <th>Viva Demo Action</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="requests-table-body">
+          <tr>
+            <td colspan="7" class="text-center" style="padding: 2rem; color: var(--text-muted);">Loading your requests...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Edit Request Modal -->
+  <div id="edit-modal" class="modal-backdrop hidden">
+    <div class="modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h2 style="font-size: 1.2rem;">Edit Request (<span id="edit-req-id">REQ-000</span>)</h2>
+        <button id="close-modal-btn" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+      </div>
+
+      <form id="edit-request-form">
+        <input type="hidden" id="edit-id">
+
+        <div class="form-group">
+          <label class="form-label" for="edit-type">Request Type</label>
+          <select id="edit-type" class="form-select" required>
+            <option value="Bonafide Certificate">Bonafide Certificate</option>
+            <option value="Leave Application">Leave Application</option>
+            <option value="ID Card Replacement">ID Card Replacement</option>
+            <option value="Fee Installment">Fee Installment Request</option>
+            <option value="Marks Sheet Correction">Marks Sheet Correction</option>
+            <option value="Lab Access">Lab / Library Special Access</option>
+            <option value="Other">Other Request</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="edit-title">Title</label>
+          <input type="text" id="edit-title" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="edit-desc">Description</label>
+          <textarea id="edit-desc" class="form-textarea" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="edit-date">Required Date</label>
+          <input type="date" id="edit-date" class="form-input" required>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" style="flex: 1;">Save Changes</button>
+          <button type="button" id="cancel-edit-btn" class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    🎓 College Request Management Portal • Student Assignment Project
+  </footer>
+
+  <script src="js/requests.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Request - College Request Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="dashboard.html" class="brand">
+        <div class="brand-icon">🎓</div>
+        <span>College Portal</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="create-request.html" class="nav-link active">Create Request</a></li>
+        <li><a href="requests.html" class="nav-link">My Requests</a></li>
+        <li><span id="user-display" class="user-badge">Student</span></li>
+        <li><a href="#" id="logout-btn" class="nav-link logout">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header" style="max-width: 650px; margin: 0 auto 1.5rem auto;">
+      <div>
+        <h1 class="page-title">Submit New Request</h1>
+        <p class="page-subtitle">Fill in the quick details below to lodge your college request</p>
+      </div>
+    </div>
+
+    <!-- Create Request Form Card -->
+    <div class="form-card">
+      <div id="success-alert" class="alert alert-success hidden"></div>
+      <div id="error-alert" class="alert alert-danger hidden"></div>
+
+      <form id="create-request-form">
+        <!-- 1. Request Type -->
+        <div class="form-group">
+          <label class="form-label" for="request-type">1. Request Type <span style="color:red;">*</span></label>
+          <select id="request-type" class="form-select" required>
+            <option value="" disabled selected>-- Select Request Type --</option>
+            <option value="Bonafide Certificate">Bonafide Certificate</option>
+            <option value="Leave Application">Leave Application</option>
+            <option value="ID Card Replacement">ID Card Replacement</option>
+            <option value="Fee Installment">Fee Installment Request</option>
+            <option value="Marks Sheet Correction">Marks Sheet Correction</option>
+            <option value="Lab Access">Lab / Library Special Access</option>
+            <option value="Other">Other Request</option>
+          </select>
+        </div>
+
+        <!-- 2. Request Title -->
+        <div class="form-group">
+          <label class="form-label" for="request-title">2. Request Title <span style="color:red;">*</span></label>
+          <input type="text" id="request-title" class="form-input" placeholder="e.g. Need Bonafide Certificate for Bus Pass" required>
+        </div>
+
+        <!-- 3. Description -->
+        <div class="form-group">
+          <label class="form-label" for="request-desc">3. Description <span style="color:red;">*</span></label>
+          <textarea id="request-desc" class="form-textarea" placeholder="Briefly state the reason for this request..." required></textarea>
+        </div>
+
+        <!-- 4. Required Date -->
+        <div class="form-group">
+          <label class="form-label" for="required-date">4. Required Date <span style="color:red;">*</span></label>
+          <input type="date" id="required-date" class="form-input" required>
+        </div>
+
+        <!-- 5. Attachment (Optional) -->
+        <div class="form-group">
+          <label class="form-label" for="attachment">5. Attachment (Optional)</label>
+          <input type="file" id="attachment" class="form-input">
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Supports PDF, JPG, PNG files (for demo presentation)</span>
+        </div>
+
+        <!-- Buttons -->
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" style="flex: 1;">Submit Request</button>
+          <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    🎓 College Request Management Portal • Student Assignment Project
+  </footer>
+
+  <script src="js/create-request.js"></script>
+</body>
+</html>

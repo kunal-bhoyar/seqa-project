@@ -1,0 +1,52 @@
+[
+  {
+    "id": "REQ-005",
+    "type": "Bonafide Certificate",
+    "title": "for bus",
+    "description": "collage bus application",
+    "requiredDate": "2026-08-05",
+    "attachment": "None",
+    "status": "Approved",
+    "createdAt": "2026-08-19"
+  },
+  {
+    "id": "REQ-001",
+    "type": "Bonafide Certificate",
+    "title": "Application for Passport Verification Bonafide",
+    "description": "Need a bonafide certificate for passport application and address verification.",
+    "requiredDate": "2026-08-25",
+    "attachment": "passport_doc.pdf",
+    "status": "Pending",
+    "createdAt": "2026-08-18"
+  },
+  {
+    "id": "REQ-002",
+    "type": "Leave Application",
+    "title": "Medical Leave for 3 Days",
+    "description": "Requesting leave due to viral fever from August 20 to August 22.",
+    "requiredDate": "2026-08-20",
+    "attachment": "medical_certificate.pdf",
+    "status": "Approved",
+    "createdAt": "2026-08-15"
+  },
+  {
+    "id": "REQ-003",
+    "type": "ID Card Replacement",
+    "title": "Duplicate ID Card Request",
+    "description": "Lost my original ID card in the library. Requisite fee paid at counter.",
+    "requiredDate": "2026-08-28",
+    "attachment": "fee_receipt.jpg",
+    "status": "Rejected",
+    "createdAt": "2026-08-12"
+  },
+  {
+    "id": "REQ-004",
+    "type": "Lab Access",
+    "title": "Late Night Computer Lab Access",
+    "description": "Requesting special permission to access the AI Lab after 6 PM for project work.",
+    "requiredDate": "2026-08-22",
+    "attachment": "None",
+    "status": "Pending",
+    "createdAt": "2026-08-19"
+  }
+]

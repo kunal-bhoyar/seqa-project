@@ -1,0 +1,12 @@
+{
+  "name": "college-request-portal",
+  "version": "1.0.0",
+  "description": "College Request Management Portal - Student Assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

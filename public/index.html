@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Request Portal - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-card">
+    <div class="login-header">
+      <div class="brand-icon" style="margin: 0 auto; width: 48px; height: 48px; font-size: 1.5rem;">🎓</div>
+      <h1>College Request Portal</h1>
+      <p>Student Assignment Portal</p>
+    </div>
+
+    <div class="demo-credentials">
+      <strong>🔑 Viva Demo Credentials:</strong><br>
+      • Username: <code>student</code><br>
+      • Password: <code>student123</code>
+    </div>
+
+    <div id="login-alert" class="alert alert-danger hidden"></div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label class="form-label" for="username">Username</label>
+        <input type="text" id="username" class="form-input" placeholder="Enter username (student)" required autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" id="password" class="form-input" placeholder="Enter password (student123)" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Log In</button>
+    </form>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
